@@ -1,0 +1,50 @@
+<!-- navbar start  -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <img src="assets/spotify_light.png" width="120" />
+  </div>
+</nav>
+<!-- navbar end  -->
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="submit()">
+    <div class="login__container">
+      <h1>
+        <p class="fw-bold">Log in to Spotify</p>
+      </h1>
+      <!-- <button class="continue_btn" [style.width]="'30%'">
+          Continue with Google
+        </button>
+        <button class="continue_btn" [style.width]="'30%'">
+          Continue with Facebook
+        </button>
+        <button class="continue_btn" [style.width]="'30%'">
+          Continue with Apple
+        </button>
+        <button class="continue_btn" [style.width]="'30%'">
+          Continue with phone number
+        </button> -->
+      <div>
+        <label><strong>Email address or username</strong></label> <br />
+        <input [formControl]="usernameFormControl" type="text" placeholder="Email address or username" />
+      </div>
+      <div>
+        <label><strong>Password</strong></label> <br />
+        <input [formControl]="passwordFormControl" type="password" placeholder="Password" />
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+        <label class="form-check-label" for="flexSwitchCheckChecked">Remember me</label>
+      </div>
+      <button class="login__btn" [style.width]="'30%'">LOG IN</button>
+      <br />
+      <label class="mt-3"><small><a [style.textDecoration]="'underline'"><b>Forgot your Password
+              ?</b></a></small></label>
+      <hr [style.width]="'30%'" />
+      <div class="action_buttons">
+        <label class="mt-3"><small><a><b>Don't have an account?</b></a></small></label>
+        <label class="mt-3"><small><a [style.textDecoration]="'underline'"><b>Sign up for
+                Spotify</b></a></small></label>
+      </div>
+    </div>
+  </form>
+</div>
